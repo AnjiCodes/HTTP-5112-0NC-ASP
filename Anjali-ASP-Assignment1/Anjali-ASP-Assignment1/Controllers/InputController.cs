@@ -8,6 +8,7 @@ using System.Web.Http;
 
 namespace Anjali_ASP_Assignment1.Controllers
 {
+ 
     public class InputController : ApiController
     {
         [HttpGet]
@@ -18,6 +19,10 @@ namespace Anjali_ASP_Assignment1.Controllers
             return a;
         }
 
+        /// <summary>
+        /// The following function will return square for the number passed as the paramer.
+        /// </summary>
+        /// <param name="id">Number that function will return square for</param>
         [HttpGet]
         [Route("api/Square/{id}")]
         public int Square(int id)
