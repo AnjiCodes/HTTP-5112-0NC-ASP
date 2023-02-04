@@ -11,6 +11,11 @@ namespace Anjali_ASP_Assignment1.Controllers
  
     public class InputController : ApiController
     {
+
+        /// <summary>
+        /// The following function will return the addition to 10 for the number passed as the parameter.
+        /// </summary>
+        /// <param name="id">Number that function will return id + 10 for </param>
         [HttpGet]
         [Route("api/AddTen/{id}")]
         public int AddTen(int id)
@@ -20,7 +25,7 @@ namespace Anjali_ASP_Assignment1.Controllers
         }
 
         /// <summary>
-        /// The following function will return square for the number passed as the paramer.
+        /// The following function will return square for the number passed as the parameter.
         /// </summary>
         /// <param name="id">Number that function will return square for</param>
         [HttpGet]
@@ -31,6 +36,9 @@ namespace Anjali_ASP_Assignment1.Controllers
             return b;
         }
 
+        /// <summary>
+        /// The following function will post the string message.
+        /// </summary>
         [HttpPost]
         [Route("api/Greeting")]
         public string Greeting()
@@ -39,12 +47,22 @@ namespace Anjali_ASP_Assignment1.Controllers
 
         }
 
+        /// <summary>
+        /// The following function will return the number of people (id) for the number passed as the parameter.
+        /// </summary>
+        /// <param name="id">Number that function will return id no. of people </param>
+
         [HttpGet]
         [Route("api/Greeting/{id}")]
         public string Greeting(string id)
         {
             return "Greetings to " + id + " people!";
         }
+
+        /// <summary>
+        /// The following function will return the Math Problem of Add,Sub,Div,Mul for the number passed as the parameter.
+        /// </summary>
+        /// <param name="id">Number that function will return id solution for the Math Problem for </param>
 
         [HttpGet]
         [Route("api/NumberMachine/{id}")]
@@ -54,6 +72,11 @@ namespace Anjali_ASP_Assignment1.Controllers
             return a;
 
         }
+
+        /// <summary>
+        /// The following function will return the number of days in a hotel for number passed as the parameter.
+        /// </summary>
+        /// <param name="id">Number that function will return the number of days </param>
 
         [HttpGet]
         [Route("api/HostingCost/{id}")]
